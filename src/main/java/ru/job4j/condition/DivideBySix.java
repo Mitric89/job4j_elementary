@@ -5,9 +5,9 @@ public class DivideBySix {
         String result;
         if (isEven(number) && isDividesBy3(number)) {
             result = "The number divides by 6.";
-        } else if (!isEven(number) && isDividesBy3(number)) {
+        } else if (isDividesBy3(number)) {
             result = "The number divides by 3, but it isn't the even number.";
-        } else if (isEven(number) && !isDividesBy3(number)) {
+        } else if (isEven(number)) {
             result = "The number doesn't divide by 3, but it is the even number.";
         } else {
             result = "The number doesn't divide by 3 and it isn't the even number.";
