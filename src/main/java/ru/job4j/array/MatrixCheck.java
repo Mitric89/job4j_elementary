@@ -20,4 +20,12 @@ public class MatrixCheck {
         }
         return result;
     }
+
+    public static char[] extractDiagonal(char[][] board) {
+        char[] result = new char[board.length];
+        for (int i = 0, j = 0; i < board.length; i++, j++) {
+            result[i] = board[i][j];
+        }
+        return result;
+    }
 }
