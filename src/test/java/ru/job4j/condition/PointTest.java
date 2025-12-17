@@ -33,8 +33,16 @@ class PointTest {
     @Test
     void whenX1Minus5Y11X28Y20Then13Dot03() {
         Point a = new Point(-5, 1);
-        Point b = new Point(8, -0);
+        Point b = new Point(8, 0);
         double result = a.distance(b);
         assertThat(result).isEqualTo(13.04, withPrecision(0.01));
+    }
+
+    @Test
+    void whenX1Minus5Y11Z15X28Y24Z210Then14Dot25() {
+        Point a = new Point(-5, 1, 5);
+        Point b = new Point(8, 4,  10);
+        double result = a.distance3d(b);
+        assertThat(result).isEqualTo(14.25, withPrecision(0.01));
     }
 }
